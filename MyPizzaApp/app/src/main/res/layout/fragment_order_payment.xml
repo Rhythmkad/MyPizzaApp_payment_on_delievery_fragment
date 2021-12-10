@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_10sdp"
+    tools:context=".fragments.OrderPaymentFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/payment_sub_total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/rounded_elegance"
+            android:layout_toStartOf="@+id/payment_sub_total_value_tv"
+            android:text="SubTotal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/payment_sub_total_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/rounded_elegance"
+            android:text="@string/dummy_price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            tools:ignore="RelativeOverlap" />
+
+
+        <TextView
+            android:id="@+id/payment_tax_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payment_sub_total_tv"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/rounded_elegance"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/payment_tax_value_tv"
+            android:text="@string/tax_txt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/payment_tax_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_below="@+id/payment_sub_total_value_tv"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/rounded_elegance"
+            android:text="$ 2.1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0_5dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/dark_grey" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/payment_total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/rounded_elegance"
+            android:layout_toStartOf="@+id/payment_total_value_tv"
+            android:text="@string/total_amount_txt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/payment_total_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/rounded_elegance"
+            android:hint="@string/dummy_price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0_5dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/dark_grey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_24sdp">
+
+            <RadioButton
+                android:id="@+id/cash_on_delivery_radio_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rounded_elegance"
+                android:text="@string/cash_on_delivery"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"
+                android:checked="true"
+                android:clickable="false"
+                android:focusable="false"/>
+
+        <include
+            android:id="@+id/proceed_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/common_rounded_filled_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>
